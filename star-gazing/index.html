@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="section">
+        <div class="sky-container" id='stars'>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+        <img src="./image/bg.jpg" id='bg' class="lax" data-lax-translate-y='0 1, 400 -260' data-lax-scale_small="0 1, 100 0">
+        <img id="forest" src="./image/forest.png" alt="forest"data-lax-scale_small="0 1, -100 0" class="forest lax" data-lax-translate-y="0 1, 400 2">
+        <h2 id="title" class="lax" data-lax-scale_small="0 1, 500 0" data-lax-translate-y="0 0, 400 -400">Starry Night</h2>
+</div>
+    <div class="container-secondary lax" data-lax-scale_small="0 1, 500 0" data-lax-translate-y="0 0, 200 -150" data-lax-opacity="0 0, 300 1" >
+        <h2>Star Gazing</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex totam voluptas nemo esse eaque laborum! A porro cumque esse praesentium, rem beatae inventore repellat exercitationem quidem eos, autem, quo sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla vel minima autem nostrum veniam omnis corrupti, necessitatibus, cupiditate, facilis magni accusamus officia consequuntur cum quae. Porro provident quaerat expedita.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla vel minima autem nostrum veniam omnis corrupti, necessitatibus, cupiditate, facilis magni accusamus officia consequuntur cum quae. Porro provident quaerat expedita.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla vel minima autem nostrum veniam omnis corrupti, necessitatibus, cupiditate, facilis magni accusamus officia consequuntur cum quae. Porro provident quaerat expedita.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla vel minima autem nostrum veniam omnis corrupti, necessitatibus, cupiditate, facilis magni accusamus officia consequuntur cum quae. Porro provident quaerat expedita.</p>
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+    <script>
+        window.onload = function() {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+     	   window.requestAnimationFrame(updateLax)
+        }
+    lax.setup({
+        breakpoints: { small:360, large: 640 }
+    })
+    </script>
+</body>
+</html>

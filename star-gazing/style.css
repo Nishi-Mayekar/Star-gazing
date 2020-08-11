@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:#031524 ;
+}
+.section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(125deg,#00103a 0%, #3e5f77 100%);;
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+.section::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #090a0a, transparent);
+    z-index: 10000;
+}
+.section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+#forest{
+    padding-top: 220px;
+}
+#title{
+    font-family: 'Finger Paint', cursive, Arial, Helvetica, sans-serif;
+    position: relative;
+    color: #ffffff;
+    font-size: 10em;
+    z-index: 2;
+}
+@media screen and (max-width: 1320px) {
+    #forest{
+      width: 805;
+      height: 600px;
+        
+    }
+    #bg{
+      background-image: url(./image/bg.jpg);
+      height: 100%;
+      width: auto;
+    }
+    #title{
+      font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #forest{
+      width: 700px;
+      height: 600px;
+        
+    }
+    #bg{
+      background-image: url(./image/bg.jpg);
+      height: 100%;
+      width: 90%;
+    }
+    #title{
+      font-size: 40px;
+      align-items: center;
+      padding-right: 30px;
+    }
+}
+.star {
+    height: 2px;
+    position: absolute;
+    top: -1100px;
+    left: -10px;
+    z-index:2;
+    background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
+    filter: drop-shadow(0 0 6px #699bff);
+    animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+  }
+.container-secondary{
+  padding: 30px;
+}
+.container-secondary p{
+  line-height: 2em;
+  color: #ffffff;
+  justify-content: center;
+}
+.container-secondary h2{
+  color: white;
+  font-size: 5.6em;
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+  .sky-container{
+    z-index: 2;
+    position: absolute;
+    justify-content: center;
+    transform: rotateZ(145deg);
+  }
+  
+  .star::before, .star::after {
+    position: absolute;
+    content: '';
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5f91ff, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    z-index: 10000;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 3000ms ease-in-out infinite;
+  }
+  
+  .star::after {
+    transform: translateX(50%) rotateZ(-45deg);
+  }
+  
+  .star:nth-child(1) {
+    top: calc(50% - 200px);
+    left: calc(50% - 300px);
+    animation-delay: 650ms;
+  }
+  .star:nth-child(1)::before, .star:nth-child(1)::after {
+    animation-delay: 650ms;
+  }
+  
+  .star:nth-child(2) {
+    top: calc(50% - -50px);
+    left: calc(50% - 190px);
+    animation-delay: 150ms;
+  }
+  .star:nth-child(2)::before, .star:nth-child(2)::after {
+    animation-delay: 150ms;
+  }
+  
+  .star:nth-child(3) {
+    top: calc(50% - -90px);
+    left: calc(50% - 200px);
+    animation-delay: 1600ms;
+  }
+  .star:nth-child(3)::before, .star:nth-child(3)::after {
+    animation-delay: 1600ms;
+  }
+  
+  .star:nth-child(4) {
+    top: calc(50% - 50px);
+    left: calc(50% - 250px);
+    animation-delay: 4700ms;
+  }
+  .star:nth-child(4)::before, .star:nth-child(4)::after {
+    animation-delay: 4700ms;
+  }
+  
+  .star:nth-child(5) {
+    top: calc(50% - -190px);
+    left: calc(50% - 200px);
+    animation-delay: 2100ms;
+  }
+  .star:nth-child(5)::before, .star:nth-child(5)::after {
+    animation-delay: 2100ms;
+  }
+  .star:nth-child(5) {
+    top: calc(50% - -250px);
+    left: calc(50% - 250px);
+    animation-delay: 4700ms;
+  }
+  .star:nth-child(5)::before, .star:nth-child(5)::after {
+    animation-delay: 1000ms;
+  }
+  
+  
+  
+  
+  /* Animations */
+  @keyframes tail {
+    0% {
+      width: 0;
+    }
+    
+    30% {
+      width: 100px;
+    }
+    
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shining {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 30px;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  @keyframes shooting {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(320px);
+    }
+  }
