@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://kit.fontawesome.com/85572b3d8f.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="section">
+   <nav>
+    <div class="nav-wrapper #1a237e indigo darken-4">
+      <a href="#!" class="brand-logo">  Starry Night</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#info">Info</i></a></li>
+      </ul>
+    </div>
+  </nav>
+    <div class="bgDesign" id="home">
         <div class="sky-container" id='stars'>
         <div class="star"></div>
         <div class="star"></div>
@@ -17,31 +28,38 @@
         <div class="star"></div>
     </div>
         <img src="./image/bg.jpg" id='bg' class="lax" data-lax-translate-y='0 1, 400 -260' data-lax-scale_small="0 1, 100 0">
+        
         <img id="forest" src="./image/forest.png" alt="forest"data-lax-scale_small="0 1, -100 0" class="forest lax" data-lax-translate-y="0 1, 400 2">
+        
         <h2 id="title" class="lax" data-lax-scale_small="0 1, 500 0" data-lax-translate-y="0 0, 400 -400">Starry Night</h2>
 </div>
-    <div class="container-secondary lax" data-lax-scale_small="0 1, 500 0" data-lax-translate-y="0 0, 200 -150" data-lax-opacity="0 0, 300 1" >
-        <h2>Star Gazing</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex totam voluptas nemo esse eaque laborum! A porro cumque esse praesentium, rem beatae inventore repellat exercitationem quidem eos, autem, quo sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla vel minima autem nostrum veniam omnis corrupti, necessitatibus, cupiditate, facilis magni accusamus officia consequuntur cum quae. Porro provident quaerat expedita.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla vel minima autem nostrum veniam omnis corrupti, necessitatibus, cupiditate, facilis magni accusamus officia consequuntur cum quae. Porro provident quaerat expedita.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla vel minima autem nostrum veniam omnis corrupti, necessitatibus, cupiditate, facilis magni accusamus officia consequuntur cum quae. Porro provident quaerat expedita.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla vel minima autem nostrum veniam omnis corrupti, necessitatibus, cupiditate, facilis magni accusamus officia consequuntur cum quae. Porro provident quaerat expedita.</p>
+<section id="info" class="container-secondary lax" data-lax-scale_small="0 1, 500 0" data-lax-translate-y="0 0, 200 -150" data-lax-opacity="0 0, 300 1" >
+                <h2 class="title">Astronomy Picture Of the Day</h1>
+                    <div class="row">
+                        <div class="col s12 m8 offset-m2 #212121 grey darken-4">
+                            <div id="apod" class="card ">
+                               
+                            </div>
+                        </div>
+                    </div>
     </section>
+    <footer class="page-footer #1a237e indigo darken-4">
+          
+          
+          <div class="footer-copyright ">
+            <div class="container center">
+                <i class="fas fa-heart"></i>
+            By NISHI MAYEKAR
+            </div>
+          </div>
+        </footer>
 
+
+<!--Java script------------>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./app.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
-    <script>
-        window.onload = function() {
-            lax.setup() // init
+   
 
-            const updateLax = () => {
-                lax.update(window.scrollY)
-                window.requestAnimationFrame(updateLax)
-            }
-     	   window.requestAnimationFrame(updateLax)
-        }
-    lax.setup({
-        breakpoints: { small:360, large: 640 }
-    })
-    </script>
 </body>
 </html>
