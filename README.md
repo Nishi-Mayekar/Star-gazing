@@ -1,3 +1,9 @@
-# web-animation
+#Star-gazing
 
-https://github.com/Nishi-Mayekar/Star-gazing.github.io/blob/master/star-gazing/index.html
+**API USED:**
+*NASA api:
+APOD: Astronomy Picture of the Day
+You Check the website here:*
+
+*https://nishi-mayekar.github.io/Star-gazing.github.io/star-gazing/
+*
